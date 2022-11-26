@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 app.get("/index", (req, res) => {
   res.render("index");
 });
-app.get("/task1", require('./routes/task1Route'));
+app.get("/task1", require("./routes/task1Route"));
 app.get("/task2", (req, res) => {
   res.render("task2");
 });

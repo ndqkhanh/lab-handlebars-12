@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ndqkhanh/lab-handlebars-12#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "express-handlebars": "^6.0.6"
+    "express-handlebars": "^6.0.6",
+    "nodemon": "^2.0.20"
   }
 }
