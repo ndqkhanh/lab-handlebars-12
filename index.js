@@ -34,5 +34,5 @@ app.get("/task4", (req, res) => {
 });
 app.set("port", process.env.PORT || 3000);
 app.listen(app.get("port"), () => {
-  console.log("c2c");
+  console.log("Server is running on port " + app.get("port"));
 });
