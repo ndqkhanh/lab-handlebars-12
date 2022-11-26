@@ -1,0 +1,23 @@
+{
+  "name": "lab-handlebars-12",
+  "version": "1.0.0",
+  "description": "12",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndqkhanh/lab-handlebars-12.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ndqkhanh/lab-handlebars-12/issues"
+  },
+  "homepage": "https://github.com/ndqkhanh/lab-handlebars-12#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6"
+  }
+}
