@@ -4,6 +4,7 @@ const author = '20127118 - Nguyễn Phúc Bảo';
 const renderList = (req, res) => {
   res.render('task4', {
     zodiacs,
+    title: 'Zodiacs',
     author,
   });
 };
@@ -12,6 +13,7 @@ const renderDetails = (req, res) => {
     zodiac: zodiacs.find(
       (item) => item.name.toLowerCase() == req.params.name.toLowerCase()
     ),
+    title: 'Zodiac Description',
     author,
   });
 };
