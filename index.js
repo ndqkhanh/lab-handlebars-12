@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-
 const expressHbs = require("express-handlebars");
 
 app.engine(
@@ -16,29 +15,22 @@ app.set("view engine", "hbs");
 
 app.use(express.static(__dirname + "/Handlebars-StaticFiles"));
 
-app.get("/", (req, res) => {
+app.use("/", (req, res) => {
   res.render("index");
 });
-
-app.get("/index", (req, res) => {
+app.use("/index", (req, res) => {
   res.render("index");
 });
-
-app.get("/task1", require("./routes/task1Route"));
-
-app.get("/task2", (req, res) => {
+app.use("/task1", require("./routes/task1Route"));
+app.use("/task2", (req, res) => {
   res.render("task2");
 });
-
-app.get("/task3", (req, res) => {
+app.use("/task3", (req, res) => {
   res.render("task3");
 });
-
-app.get("/task4", (req, res) => {
-  res.render("task4");
-});
+app.use("/task4", require("./routes/task4Route"));
 
 app.set("port", process.env.PORT || 3000);
 app.listen(app.get("port"), () => {
-  console.log("Server is running on port " + app.get("port"));
+  console.log("http://localhost:3000");
 });
