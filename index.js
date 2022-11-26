@@ -15,17 +15,15 @@ app.set("view engine", "hbs");
 
 app.use(express.static(__dirname + "/Handlebars-StaticFiles"));
 
-app.use("/", (req, res) => {
-  res.render("index");
+app.get("/", (req, res) => {
+  res.render("index", { title: "Jeopardize Contest", author: "12" });
 });
-app.use("/index", (req, res) => {
-  res.render("index");
+app.get("/index", (req, res) => {
+  res.render("index", { title: "Jeopardize Contest", author: "12" });
 });
-app.use("/task1", require("./routes/task1Route"));
-app.use("/task2", (req, res) => {
-  res.render("task2");
-});
-app.use("/task3", (req, res) => {
+app.get("/task1", require("./routes/task1Route"));
+app.use("/task2", require("./routes/task2Route"));
+app.get("/task3", (req, res) => {
   res.render("task3");
 });
 app.use("/task4", require("./routes/task4Route"));

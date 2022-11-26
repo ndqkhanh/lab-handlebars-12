@@ -1,5 +1,7 @@
 const express = require("express");
-const route = express.Router();
-const controller = require("../controllers/task2Controller");
+const task2Controller = require("../controllers/task2Controller");
 
-module.exports = route;
+const router = express.Router();
+router.route("/").get(task2Controller.showDefault);
+
+module.exports = router;
