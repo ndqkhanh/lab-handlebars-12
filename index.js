@@ -23,9 +23,7 @@ app.get("/index", (req, res) => {
 });
 app.get("/task1", require("./routes/task1Route"));
 app.use("/task2", require("./routes/task2Route"));
-app.get("/task3", (req, res) => {
-  res.render("task3");
-});
+app.use("/task3", require("./routes/task3Route"));
 app.use("/task4", require("./routes/task4Route"));
 
 app.set("port", process.env.PORT || 3000);
