@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 app.get("/index", (req, res) => {
   res.render("index", { title: "Jeopardize Contest", author: "12" });
 });
-app.get("/task1", require("./routes/task1Route"));
+app.use("/task1", require("./routes/task1Route"));
 app.use("/task2", require("./routes/task2Route"));
 app.use("/task3", require("./routes/task3Route"));
 app.use("/task4", require("./routes/task4Route"));
